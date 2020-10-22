@@ -1,0 +1,505 @@
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+<!-- * * * * * * * * * * * The content below * * * * * * * * * * * -->
+<!-- * * * * * * * * * * is only a placeholder * * * * * * * * * * -->
+<!-- * * * * * * * * * * and can be replaced. * * * * * * * * * * * -->
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+<!-- * * * * * * * * * Delete the template below * * * * * * * * * * -->
+<!-- * * * * * * * to get started with your project! * * * * * * * * -->
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+
+<style>
+  :host {
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  .spacer {
+    flex: 1;
+  }
+
+  .toolbar {
+    position: relative;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    background-color: #E9E9E9;
+    color: #131B31;
+    font-weight: 600;
+    height: 12vh;
+    width: 100%;
+    cursor: pointer;
+    font-family: 'Commissioner', sans-serif;
+
+  }
+
+  .toolbar img {
+    margin: 0 16px;
+  }
+
+  .user-btn{
+    height: 40px; 
+    width: 230px; 
+    border-radius: 2px; 
+    background-color:#F9F9F9;
+    margin-right: 40px;
+    border:none;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    text-decoration: none;
+  }
+
+  .user-name{
+    height: 18px;
+    width: 119px;
+    color: #5F5F5F;
+    font-family: 'Commissioner', sans-serif;
+    font-size: 14px;
+    font-weight: 300;
+    letter-spacing: 0;
+    line-height: 18px;
+    text-decoration: none;
+  }
+
+  .content{
+    width: 100%;
+    height: auto;
+    background-color: #DFDFDF;
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .sideBar{
+    height: 972px;
+    width: 256px;
+    background-color: #FFFFFF;
+    box-shadow: 0 0 12px 0 rgba(0,0,0,0.05);
+    margin-left: -21px;
+  }
+  .sideItems{
+    height: 56px;
+    width: 256px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+  .iconItem{
+    height: 32px;
+    width: 32px;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .titleItem{
+    height: 18px;
+    width: 75px;
+    color: #6B6B6B;
+    font-family: 'Commissioner', sans-serif;
+    font-size: 20px;
+    font-weight: 300;
+    letter-spacing: 0;
+    line-height: 18px;
+    text-align: start;
+  }
+  .line {
+    box-sizing: border-box;
+    height: 2px;
+    width: 256px;
+    border: 1px solid #E9E9E9;
+    margin: 0;
+}
+  .ContentContainer{
+    
+  }
+.SectionHeader {
+  box-sizing: border-box;
+  height: 128px;
+  width: 1104px;
+  border: 1px solid #E9E9E9;
+  background-color: #FFFFFF;
+  box-shadow: 0 0 16px 0 rgba(0,0,0,0.04);
+  margin-top:37px;
+  display: flex;
+}
+.WrapperTitle{
+  width:50%;
+  height: auto;
+}
+.SectionTitle {
+  height: 25px;
+  width: 78px;
+  color: #131B31;
+  padding: 34px 0 0 40px;
+}
+.Title{
+  font-family: 'Commissioner', sans-serif;
+  font-size: 20px;
+  font-weight: 300;
+  letter-spacing: 0;
+  line-height: 25px;
+  margin: 0;
+}
+.SectionDescription {
+  height: 18px;
+  width: 354px;
+  padding: 0 0 35px 40px;
+}
+.Description{
+  color: #969696;
+  font-family: "Circular Std";
+  font-size: 14px;
+  font-weight: 300;
+  letter-spacing: 0;
+  line-height: 18px;
+}
+
+.WrapperBtn{
+  width: 50%;
+  height: auto;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.BtnPreview{
+  height: 48px;
+  width: 167px;
+}
+.Preview{
+  color: #FA6A00;
+  font-family: 'Commissioner', sans-serif;
+  font-size: 14px;
+  font-weight: 300;
+  letter-spacing: 0;
+  line-height: 18px;
+  box-sizing: border-box;
+  height: 48px;
+  width: 167px;
+  border: 1px solid #FA6A00;
+  border-radius: 2px;
+  background-color: transparent;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.BtnAdd{
+  height: 48px;
+  width: 225px;
+}
+.Add{
+  height: 48px;
+  width: 225px;
+  border-radius: 2px;
+  background-color: #FA6A00;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  border: none;
+  font-family: 'Commissioner', sans-serif;
+  color: #FFFFFF;
+  font-size: 14px;
+  font-weight: 300;
+  letter-spacing: 0;
+  line-height: 18px;
+}
+
+.Container {
+  height: 664px;
+  width: 1102px;
+  border: 1px solid #E9E9E9;
+  background-color: #FFFFFF;
+  box-shadow: 0 0 16px 0 rgba(0,0,0,0.04);
+  margin-top: 20px;
+}
+.TableContent{
+  height: 48px;
+  width: 1041px;
+}
+.Filter{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 3% 0 3% 0;
+}
+.iconSearch{
+  position: absolute;
+  margin-left: -58%;
+}
+.Search{
+  height: 48px;
+  width: 387px;
+  border: 1px solid #E9E9E9;
+  font-family: 'Commissioner', sans-serif;
+  color: #FA6A00;
+}
+::placeholder{
+  font-family: 'Commissioner', sans-serif;
+  height: 18px;
+  width: 169.13px;
+  color: #5F5F5F;
+  font-size: 14px;
+  font-weight: 300;
+  letter-spacing: 0;
+  line-height: 18px;
+  text-align: center;
+}
+.bgInput{
+  box-sizing: border-box;
+  height: 48px;
+  width: 150px;
+  border: 1px solid #E9E9E9;
+  border-radius: 2px;
+  background-color: #F9F9F9;
+}
+.bgInputOrder{
+  height: 48px;
+  width: 180px;
+  border: 1px solid #E9E9E9;
+  border-radius: 2px;
+  background-color: #F9F9F9;
+  box-sizing: border-box;
+}
+.iconArrow{
+  margin-right: -7%;
+  display: flex;
+  justify-content: center;
+  position: absolute;
+}
+.iconArrowOrder{
+  margin-right: -36%;
+  display: flex;
+  justify-content: center;
+  position: absolute;
+}
+.iconArrowAll{
+  margin-right: -61%;
+  display: flex;
+  justify-content: center;
+  position: absolute;
+}
+.lineTab {
+    box-sizing: border-box;
+    height: 2px;
+    width: 106%;
+    border: 1px solid #E9E9E9;
+    margin: 0;
+}
+.Table{
+  width: 100%;
+  height: auto;
+}
+.Titles{
+  height: 64px;
+  width: 1104px;
+}
+.Headboard{
+  height: 25px;
+  width: 65px;
+  color: #494949;
+  font-family: 'Commissioner', sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0;
+  line-height: 18px;
+}
+  /* Responsive Styles */
+  @media screen and (max-width: 767px) {
+  }
+
+  @media screen and (max-width: 575px) {
+  }
+</style>
+
+<!-- Toolbar -->
+<div class="toolbar" role="banner">
+  <img
+    width="40"
+    alt="Angular Logo"
+    src="../assets/logojeque.png"
+  />
+  <span>Jeque Test</span>
+    <div class="spacer"></div>
+    <a aria-label="" target="_blank" rel="noopener" href="" title="" style="text-decoration: none;">
+      <button class="user-btn">
+        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="#969696"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/><path d="M0 0h24v24H0z" fill="none"/></svg>
+        <span class="user-name">Daniel Arenas</span>
+        <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 24 24" fill="#FA6A00"><path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"/><path fill="none"  d="M0 0h24v24H0V0z"/></svg>
+      </button>
+    </a>
+</div>
+
+<div class="content" role="main">
+  <div class="sideBar">
+    <div class="sideItems">
+      <div class="iconItem">
+        <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 24 24" fill="#FA6A00"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/><path d="M0 0h24v24H0z" fill="none"/></svg>
+      </div>
+      <div class="titleItem">
+        <span>Usuarios</span>
+      </div>
+    </div>
+    <figure class="line"></figure>
+    <div class="sideItems">
+      <div class="iconItems">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="#C7C7C7"><path d="M7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zM1 2v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.14 0-.25-.11-.25-.25l.03-.12.9-1.63h7.45c.75 0 1.41-.41 1.75-1.03l3.58-6.49c.08-.14.12-.31.12-.48 0-.55-.45-1-1-1H5.21l-.94-2H1zm16 16c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2z"/><path d="M0 0h24v24H0z" fill="none"/></svg>
+      </div>
+      <div class="titleItem">
+        <span>Slider</span>
+      </div>
+    </div>
+    <figure class="line"></figure>
+    <div class="sideItems">
+      <div class="iconItems">
+        <img src="../assets/icon@2x.png" style="width: 25px;">
+      </div>
+      <div class="titleItem">
+        <span>Reportes</span>
+      </div>
+    </div>
+    <figure class="line"></figure>
+    <div class="sideItems">
+      <div class="iconItems">
+        <img src="../assets/term.png" style="width: 25px;">
+      </div>
+      <div class="titleItem">
+        <span>Términos</span>
+      </div>
+    </div>
+    <figure class="line"></figure>
+    <div class="sideItems">
+      <div class="iconItems">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" transform="rotate(-90)" fill="#C7C7C7"><path fill="none" d="M0 0h24v24H0V0z"/><path d="M17 16l-4-4V8.82C14.16 8.4 15 7.3 15 6c0-1.66-1.34-3-3-3S9 4.34 9 6c0 1.3.84 2.4 2 2.82V12l-4 4H3v5h5v-3.05l4-4.2 4 4.2V21h5v-5h-4z"/><path fill="none" d="M0 0h24v24H0z"/></svg>
+      </div>
+      <div class="titleItem">
+        <span>Redes</span>
+      </div>
+    </div>
+    <figure class="line"></figure>
+  </div>
+  <div class="ContentContainer">
+  <div class="SectionHeader">
+    <div class="WrapperTitle">
+      <div class="SectionTitle">
+        <h1 class="Title">Usuario</h1>
+      </div>
+      <div class="SectionDescription">
+        <p class="Description">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+      </div>
+    </div>
+    <div class="WrapperBtn">
+      <div class="BtnPreview">
+        <button class="Preview">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="#FA6A00"><path d="M0 0h24v24H0z" fill="none"/><path d="M12 4.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5zM12 17c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5zm0-8c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/></svg>
+          Previsualizar
+        </button>
+      </div>
+      <div class="BtnAdd">
+        <button class="Add">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="#ffffff"><path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"/><path d="M0 0h24v24H0z" fill="none"/></svg>
+          Agregar nuevo usuario
+        </button>
+      </div>
+    </div>
+  </div>
+  <div class="Container">
+    <div class="TableContent">
+      <header class="Filter">
+        <input type="text" class="Search" placeholder="Búsqueda">
+        <span class="iconSearch">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="#FA6A00"><path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/><path d="M0 0h24v24H0z" fill="none"/></svg>
+        </span>
+        <span class="iconArrow">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="#FA6A00"><path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"/><path fill="none"  d="M0 0h24v24H0V0z"/></svg>        
+        </span>
+        <input type="text" class="bgInput" placeholder="8 por página">
+        <span class="iconArrowOrder">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="#FA6A00"><path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"/><path fill="none"  d="M0 0h24v24H0V0z"/></svg>        
+        </span>
+        <input type="text" class="bgInputOrder" placeholder="Ordenar de A - Z">
+        <span class="iconArrowAll">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="#FA6A00"><path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"/><path fill="none"  d="M0 0h24v24H0V0z"/></svg>        
+        </span>
+        <input type="text" class="bgInput" placeholder="Todos">
+        <span>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="#FA6A00"><path d="M3 13h2v-2H3v2zm0 4h2v-2H3v2zm0-8h2V7H3v2zm4 4h14v-2H7v2zm0 4h14v-2H7v2zM7 7v2h14V7H7z"/><path d="M0 0h24v24H0z" fill="none"/></svg>
+          <img src="" alt="">
+        </span>
+      </header>
+      <figure class="lineTab"></figure>
+      <table class="Table">
+        <tr class="Titles">
+          <th class="Headboard">Foto</th>
+          <th class="Headboard">Nombre</th> 
+          <th class="Headboard">Apellido paterno</th>
+          <th class="Headboard">Apellido materno</th>
+          <th class="Headboard">Correo</th>
+          <th class="Headboard">Rol</th>
+          <th class="Headboard">Status</th>
+        </tr>
+        <figure class="lineTab"></figure>
+        <tr class="Titles">
+          <td class="UserCamp">
+            <svg width="12px" height="20px" viewBox="0 0 12 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                <g id="Test" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                  <g id="Home---List" transform="translate(-319.000000, -871.000000)" fill="#D0D0D0">
+                    <g id="container" transform="translate(296.000000, 249.000000)">
+                      <g id="table" transform="translate(0.000000, 96.000000)">
+                        <g id="row" transform="translate(0.000000, 504.000000)">
+                          <g id="icon-drag" transform="translate(17.000000, 20.000000)">
+                            <circle id="oval" cx="8" cy="4" r="2"></circle>
+                            <circle id="oval" cx="16" cy="4" r="2"></circle>
+                            <circle id="oval" cx="8" cy="12" r="2"></circle>
+                            <circle id="oval" cx="16" cy="12" r="2"></circle>
+                            <circle id="oval" cx="8" cy="20" r="2"></circle>
+                            <circle id="oval" cx="16" cy="20" r="2"></circle>
+                          </g>
+                        </g>
+                      </g>
+                    </g>
+                  </g>
+                </g>
+              </svg>
+            </td>
+          <td class="UserCamp">
+            <img src="" alt="">
+          </td>
+          <td class="UserCamp">Oscar</td>
+          <td class="UserCamp">Rubio</td>
+          <td class="UserCamp">Mendoza</td>
+          <td class="UserCamp">oscar.sfd@gmail.com</td>
+          <td class="UserCamp">Admin</td>
+          <td>
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M17 7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h10c2.76 0 5-2.24 5-5s-2.24-5-5-5zM7 15c-1.66 0-3-1.34-3-3s1.34-3 3-3 3 1.34 3 3-1.34 3-3 3z"/><path fill="none" d="M0 0h24v24H0z"/></svg>
+          </td>
+        </tr>
+        <tr>
+          <td>Eve</td>
+          <td>Jackson</td>
+          <td>94</td>
+        </tr>
+        <tr>
+          <td>John</td>
+          <td>Doe</td>
+          <td>80</td>
+        </tr>
+      </table>
+    </div>
+  </div>
+</div>
+</div>
+
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+<!-- * * * * * * * * * * * The content above * * * * * * * * * * * -->
+<!-- * * * * * * * * * * is only a placeholder * * * * * * * * * * -->
+<!-- * * * * * * * * * * and can be replaced. * * * * * * * * * * * -->
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+<!-- * * * * * * * * * * End of Placeholder * * * * * * * * * * * -->
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+
+
+
+<router-outlet></router-outlet>
